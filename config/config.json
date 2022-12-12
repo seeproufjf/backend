@@ -1,1 +1,0 @@
-{   "app": {     "port": 8000   },   "database": {     "host": "35.247.194.171",     "username": "root",     "password": "toor",     "database": "seeprodb",     "dialect": "mysql",     "define": {       "timestamps": true,       "underscored": true     }   } }
