@@ -1,0 +1,11 @@
+{
+  "app": { "port": 8000 },
+  "database": {
+    "host": "app-seepro.cjvqkqljskme.us-east-1.rds.amazonaws.com",
+    "username": "seepro",
+    "password": "see#Pro_151",
+    "database": "seepro",
+    "dialect": "mysql",
+    "define": { "timestamps": true, "underscored": true }
+  }
+}
