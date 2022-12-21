@@ -102,10 +102,18 @@ class Login {
       let emails = [];
       
       attendance.forEach(point => {
-        let pointTime = point.time;
-        pointTime = moment(new Date(pointTime).toISOString()).format('YYYY-MM-DD HH:mm:ss');
-        pointTime = this.fixDatePoint(pointTime);
+        
+        let pointTime;
 
+        try{
+          pointTime = this.fixDateStart(point.time);
+          pointTime = moment(new Date(pointTime).toISOString()).format('YYYY-MM-DD HH:mm:ss');
+        }catch(err){
+          pointTime = point.time;
+          pointTime = moment(new Date(pointTime).toISOString()).format('YYYY-MM-DD HH:mm:ss');
+        }
+        
+               
         // se chegou dps do final
         if(moment(pointTime).diff(end, 'minutes') > 1) { 
           1
